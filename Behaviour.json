@@ -1,0 +1,211 @@
+{   "0":
+    {
+        "parents":[],
+        "children":["1","2","3","4"],
+        "type":"selector",
+        "comment":"root"
+    },
+    "1":
+    {
+        "parents":["0"],
+        "children":["1.1","1.2","1.3"],
+        "type":"sequence",
+        "comment":"level 1 sequence 1"
+    },
+    "1.1":
+    {
+        "parents":["1"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition car ahead?"
+    },
+    "1.2":
+    {
+        "parents":["1"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition distance<threshold_stop?"
+    },
+    "1.3":
+    {
+        "parents":["1"],
+        "children":[],
+        "type":"action",
+        "comment":"stop"
+    },
+    "2":
+    {
+        "parents":["0"],
+        "children":["2.1","2.2","2.3","2.4"],
+        "type":"sequence",
+        "comment":"level 1 sequence 2"
+    },
+    "2.1":
+    {
+        "parents":["2"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition car ahead?"
+    },
+    "2.2":
+    {
+        "parents":["2"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition distance<threshold_slowdwon?"
+    },
+    "2.3":
+    {
+        "parents":["2"],
+        "children":[],
+        "type":"action",
+        "comment":"slowdown"
+    },
+    "2.4":
+    {
+        "parents":["2"],
+        "children":["2.4.1","2.4.2"],
+        "type":"selector",
+        "comment":"level 2 selector X"
+    },
+    "2.4.1":
+    {
+        "parents":["2.4"],
+        "children":["2.4.1.1","2.4.1.2"],
+        "type":"sequence",
+        "comment":"level 3 sequence 1"
+    },
+    "2.4.1.1":
+    {
+        "parents":["2.4.1"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition straight road?"
+    },
+    "2.4.1.2":
+    {
+        "parents":["2.4.1"],
+        "children":[],
+        "type":"action",
+        "comment":"go straight"
+    },
+    "2.4.2":
+    {
+        "parents":["2.4"],
+        "children":["2.4.2.1","2.4.2.2"],
+        "type":"sequence",
+        "comment":"level 3 sequence 2"
+    },
+    "2.4.2.1":
+    {
+        "parents":["2.4.2"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition roundabout?"
+    },
+    "2.4.2.2":
+    {
+        "parents":["2.4.2"],
+        "children":[],
+        "type":"action",
+        "comment":"take roundabout"
+    },
+    "3":
+    {
+        "parents":["0"],
+        "children":["3.1","3.2","3.3"],
+        "type":"selector",
+        "comment":"level 1 selector"
+    },
+    "3.1":
+    {
+        "parents":["3"],
+        "children":["3.1.1","3.1.2","3.1.3","2.4"],
+        "type":"sequence",
+        "comment":"level 2 sequence 1"
+    },
+    "3.1.1":
+    {
+        "parents":["3.1"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition signal ahead?"
+    },
+    "3.1.2":
+    {
+        "parents":["3.1"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition if green?"
+    },
+    "3.1.3":
+    {
+        "parents":["3.1"],
+        "children":[],
+        "type":"action",
+        "comment":"maintain speed"
+    },
+    "3.2":
+    {
+        "parents":["3"],
+        "children":["3.2.1","3.2.2","3.2.3","2.4"],
+        "type":"sequence",
+        "comment":"level 2 sequence 2"
+    },
+    "3.2.1":
+    {
+        "parents":["3.2"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition signal ahead?"
+    },
+    "3.2.2":
+    {
+        "parents":["3.2"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition if yellow?"
+    },
+    "3.2.3":
+    {
+        "parents":["3.2"],
+        "children":[],
+        "type":"action",
+        "comment":"slowdown"
+    },
+    "3.3":
+    {
+        "parents":["3"],
+        "children":["3.3.1","3.3.2"],
+        "type":"sequence",
+        "comment":"level 2 sequence 3"
+    },
+    "3.3.1":
+    {
+        "parents":["3.3"],
+        "children":[],
+        "type":"condition",
+        "comment":"condition signal ahead?"
+    },
+    "3.3.2":
+    {
+        "parents":["3.3"],
+        "children":[],
+        "type":"action",
+        "comment":"stop"
+    },
+    "4":
+    {
+        "parents":["0"],
+        "children":["4.1","2.4"],
+        "type":"sequence",
+        "comment":"level 1 sequence 3"
+    },
+    "4.1":
+    {
+        "parents":["4"],
+        "children":[],
+        "type":"action",
+        "comment":"maintain speed"
+    }
+}
